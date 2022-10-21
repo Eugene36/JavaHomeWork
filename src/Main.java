@@ -12,7 +12,7 @@ public class Main {
         System.out.println(reverseString("hello"));
 
         // Task 4
-        System.out.println(decToHex(31));
+        System.out.println(decToHex(255));
 
         // Task 5
         int[] array = new int[]{1, 0, 5, 3, 0, 6, 2, 9, 4};
@@ -89,7 +89,7 @@ public class Main {
     public static String decToHex(int num) {
         int rest;
         String res = "";
-        while (num > 16) {
+        while (num > 0) {
             rest = num % 16;
             switch (rest) {
                 case 10:
@@ -116,8 +116,6 @@ public class Main {
             }
             num = num / 16;
         }
-        res = res + num;
-
         return reverseString(res);
     }
 
